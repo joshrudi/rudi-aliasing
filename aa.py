@@ -33,8 +33,8 @@ im = cv2.imread('src_img/600p.png')
 # convert to Lab colorspace
 im = cv2.cvtColor(im, cv2.COLOR_RGB2Lab)
 
-# perform 4xAA
-for i in range(4):
+# perform 2xAA
+for i in range(2):
     im = antialias(im)
 
 # convert back to RGB colorspace
