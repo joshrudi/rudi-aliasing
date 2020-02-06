@@ -17,7 +17,7 @@ def antialias(im):
     # iterate through x and y values, as well as the L*a*b values (c for color)
     for y in range(1, len(im)-1):
 
-        for x in range(1, len(im[x])-1):
+        for x in range(1, len(im[y])-1):
 
             for c in range(0, 3):
             
