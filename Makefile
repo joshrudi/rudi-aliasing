@@ -1,2 +1,2 @@
 aa: aa.cpp
-	g++ -o aa aa.cpp -lpng
+	g++ aa.cpp -o aa `pkg-config --cflags --libs opencv`

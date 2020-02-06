@@ -15,14 +15,14 @@ def antialias(im):
     aa = im.copy()
     
     # iterate through x and y values, as well as the L*a*b values (c for color)
-    for x in range(1, len(im)-1):
+    for y in range(1, len(im)-1):
 
-        for y in range(1, len(im[x])-1):
+        for x in range(1, len(im[x])-1):
 
             for c in range(0, 3):
             
                 # Amazing formula.  Its really simple too, we just take the average between the (avg of surrounding pixels) & our current pixel
-                aa[x][y][c] = 1/2 * (int(im[x][y][c]) + 1/4 * (int(im[x+1][y][c]) + int(im[x-1][y][c]) + int(im[x][y+1][c]) + int(im[x][y-1][c])))
+                aa[y][x][c] = 1/2 * (int(im[y][x][c]) + 1/4 * (int(im[y+1][x][c]) + int(im[y-1][x][c]) + int(im[y][x+1][c]) + int(im[y][x-1][c])))
     
     return aa
 
